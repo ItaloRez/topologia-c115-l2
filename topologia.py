@@ -32,5 +32,9 @@ class CustomTopology(Topo):
         self.addLink(h5, s3)
         self.addLink(h6, s3)
 
+        # Adicionando os switches s1, s2 e s3 conectados entre si
+        self.addLink(s1, s2)
+        self.addLink(s1, s3)
+
 
 topos = {'custom': (lambda: CustomTopology())}
